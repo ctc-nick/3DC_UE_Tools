@@ -1,8 +1,8 @@
 # SPDX-License-Identifier: GPL-2.0-or-later
-
+# testing codespaces right now
 import bpy
 from bpy.types import bpy_prop_collection
-
+print("test")
 print('------------------------------------------------------------------------------------')
 
 class TEST_OT_poll():
@@ -18,7 +18,7 @@ class TEST_OT_del_double_mats(bpy.types.Operator, TEST_OT_poll):
     bl_label = "3DC_Tools"
     bl_description = "Delete duplicate Materials"
     bl_options = {'REGISTER', 'UNDO'}    
-
+    
 
     def execute(self, context):
         
@@ -176,11 +176,11 @@ class TEST_OT_make_group2(bpy.types.Operator, TEST_OT_poll):
                                 # print(obj.name,'uses',n.image.name,'saved at',n.image.filepath)
                     
                     
-                                if n.image.name.endswith(fname):       #MAAAAAAAAAGICCCCCCCCCCC!!!!!-----
-                                    dodo=n.image.name                  #Name des Bildes
-                                    dofdof=n.image                     #Bild im Speicher
-                                    goz=n                              #Image_Node
-                                    print(dodo)
+                                if n.image.name.endswith(fname):       #If Imagename endswith
+                                    dodo=n.image.name                  #Name of Image
+                                    dofdof=n.image                     #Image in Memory
+                                    goz=n                              #the Image_Node
+                                    print(dodo)                        #print image name
                                     return goz
         #print(texture_list)
 
